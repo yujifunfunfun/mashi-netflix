@@ -16,7 +16,6 @@ export const useProps = (fetchUrl: string) => {
   useEffect(() => {
     async function fetchData() {
     const request = await axios.get(fetchUrl);
-    console.log(request.data.results);
       // ②データの整形
       const movies = request.data.results.map((movie: Movie) => ({
         id: movie.id,
